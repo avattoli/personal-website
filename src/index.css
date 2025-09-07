@@ -16,3 +16,9 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Continuous marquee rightward scroll */
+@keyframes marquee-r {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+.marquee-r { animation: marquee-r 24s linear infinite; }
