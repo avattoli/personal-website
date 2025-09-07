@@ -4,7 +4,7 @@ export default function About() {
         {/* Profile Image */}
         <div className="w-52 h-52 rounded-full overflow-hidden floaty shadow-lg">
             <img 
-            src="../public/image2.png"
+            src="image2.png"
             alt="Profile"
             className="w-full h-full object-cover"
             />

@@ -12,21 +12,21 @@ const projects: Project[] = [
     img: "mathnotes.png",
     blurb: "Typed math notes with search, export, and spaced repetition.",
     tags: ["Swift", "XCode"],
-    href: "#",
+    href: "https://github.com/avattoli/MathNotes",
   },
   {
     title: "Real-Time music game",
     img: "musicgame.png",
     blurb: "Guess-the-track party game with realtime rooms & audio snippets.",
     tags: ["JavaScript", "Socket.IO", "Node.js"],
-    href: "#",
+    href: "https://github.com/avattoli/music-game",
   },
   {
     title: "Project Management Web App",
     img: "mytasks.png",
     blurb: "Minimal Kanban with hotkeys, share links, and offline cache.",
     tags: ["Mongo", "Express", "JavaScript"],
-    href: "#",
+    href: "https://github.com/avattoli/mytasks",
   },
 ];
 
