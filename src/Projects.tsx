@@ -10,7 +10,7 @@ const projects: Project[] = [
   {
     title: "AI-Assisted Math Notes",
     img: "mathnotes.png",
-    blurb: "Typed math notes with search, export, and spaced repetition.",
+    blurb: "Convert handwritten notes into latex and get feedback through AI ",
     tags: ["Swift", "XCode"],
     href: "https://github.com/avattoli/MathNotes",
   },
@@ -24,9 +24,17 @@ const projects: Project[] = [
   {
     title: "Project Management Web App",
     img: "mytasks.png",
-    blurb: "Minimal Kanban with hotkeys, share links, and offline cache.",
+    blurb: "Minimal Jira-style application supporting methods such as Kanban and Sprints",
     tags: ["Mongo", "Express", "JavaScript"],
     href: "https://github.com/avattoli/mytasks",
+  },
+
+  {
+    title: "PDF to Flashcards App",
+    img: "pdf2cards.png",
+    blurb: "Generate flashcards with question and answers by submitting a PDF",
+    tags: ["FastAPI", "Python", "React", "JavaScript"],
+    href: "https://github.com/avattoli/notes2cards",
   },
 ];
 
@@ -105,10 +113,22 @@ export default function Projects() {
         <h2 className="mb-8 text-center text-3xl font-bold tracking-tight text-gray-900">
           Some Projects
         </h2>
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <ProjectCard key={p.title} p={p} />
-          ))}
+
+        {/* Horizontal marquee of project cards */}
+        <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white/60 p-4 shadow-sm">
+          {/* edge fade masks */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white/90 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white/90 to-transparent" />
+
+          <div className="group/marquee">
+            <div className="marquee-r inline-flex w-max gap-6 [animation-duration:12s] group-hover/marquee:[animation-play-state:paused]">
+              {[...projects, ...projects].map((p, i) => (
+                <div key={`${p.title}-${i}`} className="min-w-[260px] sm:min-w-[300px]">
+                  <ProjectCard p={p} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* GitHub button (unchanged) */}
@@ -136,4 +156,3 @@ export default function Projects() {
     </section>
   );
 }
-
