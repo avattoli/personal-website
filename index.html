@@ -1,13 +1,198 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ayush Vattoli</title>
+    <meta
+      name="description"
+      content="Ayush Vattoli studies Computer Science and Statistics at UBC."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #fbfaf7;
+        --ink: #171512;
+        --muted: #6f6a60;
+        --rule: #d8d2c6;
+        --link: #253f7a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--paper);
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: start center;
+        padding: clamp(48px, 12vh, 112px) 24px;
+        color: var(--ink);
+        font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        font-size: 18px;
+        line-height: 1.55;
+        text-rendering: optimizeLegibility;
+      }
+
+      main {
+        width: min(100%, 650px);
+      }
+
+      header {
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(32px, 7vw, 48px);
+        font-weight: 400;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0 0 20px;
+      }
+
+      section {
+        margin-top: 32px;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 18px;
+        font-weight: 400;
+        font-variant-caps: small-caps;
+        letter-spacing: 0.04em;
+      }
+
+      dl {
+        margin: 0;
+      }
+
+      .skill-row {
+        display: grid;
+        grid-template-columns: 138px 1fr;
+        gap: 18px;
+        padding: 9px 0;
+        border-top: 1px solid var(--rule);
+      }
+
+      .skill-row:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      dt,
+      dd {
+        margin: 0;
+      }
+
+      dt {
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration-thickness: 0.06em;
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        text-decoration-thickness: 0.1em;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        margin-top: 34px;
+        padding-top: 18px;
+        border-top: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .links a {
+        color: inherit;
+      }
+
+      @media (max-width: 520px) {
+        body {
+          padding-top: 40px;
+          font-size: 17px;
+        }
+
+        .skill-row {
+          grid-template-columns: 1fr;
+          gap: 2px;
+        }
+
+        .links {
+          display: grid;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main>
+      <header>
+        <h1>Ayush Vattoli</h1>
+        <p class="subtitle">Computer Science and Statistics, UBC</p>
+      </header>
+
+      <p>
+        I study Computer Science and Statistics at the University of British
+        Columbia.
+      </p>
+
+      <p>
+        I am currently working on <a href="https://eizolab.com">Eizo Lab</a>
+        and <a href="https://sqrewards.com">SQ Rewards</a>.
+      </p>
+
+      <section aria-labelledby="skills-title">
+        <h2 id="skills-title">Technical Skills</h2>
+        <dl>
+          <div class="skill-row">
+            <dt>Main stack</dt>
+            <dd>
+              I love using Next.js, TypeScript, PostgreSQL, Python, and FastAPI
+              because they help me move fast and ship things.
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Languages</dt>
+            <dd>Python, C/C++, Java, SQL, JavaScript, TypeScript</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Frameworks</dt>
+            <dd>React, Node.js, Express, FastAPI, NumPy, TensorFlow, scikit-learn</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Tools</dt>
+            <dd>Git, Docker, AWS, Google Cloud Platform</dd>
+          </div>
+        </dl>
+      </section>
+
+      <nav class="links" aria-label="Links">
+        <a href="https://github.com/avattoli">GitHub</a>
+      </nav>
+    </main>
   </body>
 </html>
