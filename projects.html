@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects — Ayush Vattoli</title>
+    <meta
+      name="description"
+      content="Projects Ayush Vattoli is currently working on."
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #fbfaf7;
+        --ink: #171512;
+        --muted: #6f6a60;
+        --rule: #d8d2c6;
+        --link: #253f7a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--paper);
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: start center;
+        padding: clamp(48px, 12vh, 112px) 24px;
+        color: var(--ink);
+        font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        font-size: 18px;
+        line-height: 1.55;
+        text-rendering: optimizeLegibility;
+      }
+
+      main {
+        width: min(100%, 650px);
+      }
+
+      header {
+        padding-bottom: 18px;
+        border-bottom: 1px solid var(--rule);
+        margin-bottom: 28px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(32px, 7vw, 48px);
+        font-weight: 400;
+        line-height: 1.08;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      p {
+        margin: 0 0 20px;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration-thickness: 0.06em;
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        text-decoration-thickness: 0.1em;
+      }
+
+      .project-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .project-item {
+        padding: 18px 0;
+        border-top: 1px solid var(--rule);
+      }
+
+      .project-item:last-child {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .project-name {
+        font-size: 18px;
+        margin: 0 0 4px;
+      }
+
+      .project-desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .back {
+        display: inline-block;
+        margin-top: 34px;
+        padding-top: 18px;
+        border-top: 1px solid var(--rule);
+        width: 100%;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .back a {
+        color: inherit;
+      }
+
+      @media (max-width: 520px) {
+        body {
+          padding-top: 40px;
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Projects</h1>
+        <p class="subtitle">Things I'm currently working on</p>
+      </header>
+
+      <ul class="project-list">
+        <li class="project-item">
+          <p class="project-name"><a href="https://eizolab.com">Eizo Lab</a></p>
+          <p class="project-desc">eizolab.com</p>
+        </li>
+        <li class="project-item">
+          <p class="project-name"><a href="https://sqrewards.com">SQ Rewards</a></p>
+          <p class="project-desc">sqrewards.com</p>
+        </li>
+        <li class="project-item">
+          <p class="project-name"><a href="https://github.com/avattoli/vidgrep">vidgrep</a></p>
+          <p class="project-desc">Semantic video search — search videos with text prompts to get matching timestamps, using CLIP embeddings and FAISS indexing.</p>
+        </li>
+        <li class="project-item">
+          <p class="project-name"><a href="https://github.com/avattoli/repo-context">repo-context</a></p>
+          <p class="project-desc">Intelligent code review system — uses AI agents and semantic search to analyze codebases and answer questions about repository code.</p>
+        </li>
+      </ul>
+
+      <nav class="back" aria-label="Navigation">
+        <a href="/">← Back</a>
+      </nav>
+    </main>
+  </body>
+</html>
